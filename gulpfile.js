@@ -16,7 +16,7 @@ var paths = {
     distCSS: '/css'
 };
 
-gulp.task('deploy', function() {
+gulp.task('upload', function() {
   gulp.src(paths.dist)
     .pipe($.rsync({
         root: paths.dist,
@@ -46,3 +46,5 @@ gulp.task('watch', function () {
 
 //default task
 gulp.task('default', ['stylus','watch']);
+
+gulp.task('deploy', ['stylus','upload']);
