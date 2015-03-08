@@ -1,0 +1,36 @@
+.toc
+  li:before
+    margin-right 10px
+  
+  .t1
+    counter-reset nav-1
+    list-style    none
+  .l1
+    margin-top    15px
+    a
+      color          light-green
+      text-transform uppercase
+    &:before
+      counter-increment nav-1
+      content           counter(nav-1)
+  
+  .t2
+    counter-reset nav-2
+    list-style none
+  .l2
+    a
+      color          white
+      text-transform none
+    &:before
+      counter-increment nav-2
+      content           counter(nav-1) "." counter(nav-2)
+  
+  .t3
+    counter-reset nav-3
+    list-style    none
+  .l3
+    a
+      color black
+    &:before
+      counter-increment nav-3
+      content           counter(nav-1) "." counter(nav-2) "." counter(nav-3)
